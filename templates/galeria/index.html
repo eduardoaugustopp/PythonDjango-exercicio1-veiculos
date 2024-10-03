@@ -1,0 +1,116 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="conteudo">
+    <section class="banner">
+        <img class="banner__imagem" src="{% static 'assets/imagens/galeria/banner.png' %}" alt="banner">
+        <h1 class="banner__titulo">A coleção de fotos para os amantes de adrenalina!</h1>
+    </section>
+    <section class="tags">
+        <p class="tags__titulo">Busque por tags:</p>
+        <ul class="tags__lista">
+            <li class="tags__tag">Carro</li>
+            <li class="tags__tag">Moto</li>
+            <li class="tags__tag">Fórmula 1</li>
+        </ul>
+    </section>
+    <section class="galeria">
+        <div class="cards">
+            <h2 class="cards__titulo">Navegue pela coleção</h2>
+            <ul class="cards__lista">
+                <li class="card">
+                    <a href="{% url 'imagem' nome_imagem='porsche_911_turbo_s.png' %}">
+                        <img class="card__imagem" src="{% static 'assets/imagens/galeria/porsche_911_turbo_s.png' %}" alt="Porsche 911 Turbo S">
+                    </a>
+                    <span class="card__tag">Carro</span>
+                    <div class="card__info">
+                        <p class="card__titulo">Porsche 911 Turbo S</p>
+                        <div class="card__texto">
+                            <p class="card__descricao">Potência </p>
+                            <span>
+                                <img src="{% static 'assets/imagens/galeria/usuario.png' %}" alt="ícone">
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="card">
+                    <a href="{% url 'imagem' nome_imagem='ferrari_458_italia.png' %}">
+                        <img class="card__imagem" src="{% static 'assets/imagens/galeria/ferrari_458_italia.png' %}" alt="Ferrari 458 Italia">
+                    </a>
+                    <span class="card__tag">Carro</span>
+                    <div class="card__info">
+                        <p class="card__titulo">Ferrari 458 Italia</p>
+                        <div class="card__texto">
+                            <p class="card__descricao">Máquina </p>
+                            <span>
+                                <img src="{% static 'assets/imagens/galeria/usuario.png' %}" alt="ícone">
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="card">
+                    <a href="{% url 'imagem' nome_imagem='ford_mustang.png' %}">
+                        <img class="card__imagem" src="{% static 'assets/imagens/galeria/ford_mustang.png' %}" alt="Ford Mustang">
+                    </a>
+                    <span class="card__tag">Carro</span>
+                    <div class="card__info">
+                        <p class="card__titulo">Ford Mustang</p>
+                        <div class="card__texto">
+                            <p class="card__descricao">Clássico </p>
+                            <span>
+                                <img src="{% static 'assets/imagens/galeria/usuario.png' %}" alt="ícone">
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="card">
+                    <a href="{% url 'imagem' nome_imagem='honda_cbr_1000rr.png' %}">
+                        <img class="card__imagem" src="{% static 'assets/imagens/galeria/honda_cbr_1000rr.png' %}" alt="Honda CBR 1000RR">
+                    </a>
+                    <span class="card__tag">Moto</span>
+                    <div class="card__info">
+                        <p class="card__titulo">Honda CBR 1000RR</p>
+                        <div class="card__texto">
+                            <p class="card__descricao">Tecnologia </p>
+                            <span>
+                                <img src="{% static 'assets/imagens/galeria/usuario.png' %}" alt="ícone">
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="card">
+                    <a href="{% url 'imagem' nome_imagem='kawasaki_kx_450_f.png' %}">
+                        <img class="card__imagem" src="{% static 'assets/imagens/galeria/kawasaki_kx_450_f.png' %}" alt="Kawasaki KX 450 F">
+                    </a>
+                    <span class="card__tag">Moto</span>
+                    <div class="card__info">
+                        <p class="card__titulo">Kawasaki KX 450 F</p>
+                        <div class="card__texto">
+                            <p class="card__descricao">Adrenalina </p>
+                            <span>
+                                <img src="{% static 'assets/imagens/galeria/usuario.png' %}" alt="ícone">
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="card">
+                    <a href="{% url 'imagem' nome_imagem='mercedes_amg_petronas.png' %}">
+                        <img class="card__imagem" src="{% static 'assets/imagens/galeria/mercedes_amg_petronas.png' %}" alt="Mercedes AMG Petronas">
+                    </a>
+                    <span class="card__tag">Fórmula 1</span>
+                    <div class="card__info">
+                        <p class="card__titulo">Mercedes AMG Petronas</p>
+                        <div class="card__texto">
+                            <p class="card__descricao">Velocidade </p>
+                            <span>
+                                <img src="{% static 'assets/imagens/galeria/usuario.png' %}" alt="ícone">
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</section>
+{% endblock %}
